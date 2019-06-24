@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: url("Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app{
+    display: flex;
+    width: 100vm;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 6.8vw;
+    margin-top: -8vh;
+}
+
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 15vh;
+    color: beige;
+    background: #000;
+    border: solid 1px #000;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 1.5px 1.5px 8px rgba(0,0,0,0.6); 
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+    height: 15vh;
+    background-color: beige;
+    border: solid 1px beige;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 1.5px 1.5px 8px rgba(0,0,0,0.6); 
+}
+
+.start,
+.pause,
+.reset{
+    padding: 1.5vh 1.5vw;
+    font-size: 2.2vw;
+    border-radius: 5px;
+    background: #000;
+    color: beige;
+    font-family: 'Merriweather', serif;
+}
+
+.buttons button:hover{
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    font-size: 2.25vw;
+}
+
+.buttons button:focus{
+    font-size: 2.5vw;
+    outline: none;
+}
+
+@media screen and (max-width: 1000px){
+    .timer,
+    .buttons{
+        height: 13vh;
+    }
+} 
+
+@media screen and (max-width: 850px){
+    .timer,
+    .buttons{
+        height: 12vh;
+    }
+} 
+
+@media screen and (max-width: 650px){
+    .timer,
+    .buttons{
+        height: 10vh;
+    }
+} 
+
+@media screen and (max-width: 400px){
+    .timer,
+    .buttons{
+        height: 8vh;
+    }
+} 
