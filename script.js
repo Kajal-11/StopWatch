@@ -6,13 +6,18 @@ let hr= 0;
 let start = document.getElementById("start");
 let pause = document.getElementById("pause");
 let reset = document.getElementById("reset");
+let isRunning = false;
 
 start.addEventListener("click", ()=>{
+    if(isRunning)
+        return
+    isRunning = true;
     timer = setInterval(TimerHandler, 1000);
 });
 
 pause.addEventListener('click', ()=>{
     timer = clearInterval(timer);
+    isRunning = false;
     DisplayTime();
 });
 
@@ -21,6 +26,7 @@ reset.addEventListener('click', ()=>{
     sec = 0;
     min = 0;
     hr = 0;
+    isRunning = false;
     DisplayTime();
 });
 
